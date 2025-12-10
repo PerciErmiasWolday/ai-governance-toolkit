@@ -1,0 +1,10 @@
+{
+  "model_name": "Student Performance Predictor",
+  "purpose": "Predict student grades based on study habits.",
+  "dataset_description": "Data collected from survey of 300 students.",
+  "limitations": "",
+  "evaluation_metrics": "Accuracy, F1-score",
+  "intended_use": "Educational guidance",
+  "not_intended_use": "",
+  "privacy_and_security": ""
+}
