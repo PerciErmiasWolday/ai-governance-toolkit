@@ -112,8 +112,6 @@ A generated visualization image
 
 **Phase A – Dataset Handling & Bias Analysis**
 
--Contributor: **Hafsa**
-
 Implemented dataset loading and validation
 
 Designed distribution-based bias detection
@@ -123,8 +121,6 @@ Generated imbalance visualizations
 Defined dataset risk levels and scoring logic
 
 **Phase B – Documentation Governance**
-
--Contributor: **Eya**
 
 Designed the model documentation checker
 
@@ -140,8 +136,6 @@ Added visualization-based reporting for documentation governance
 
 **Phase C – Application & Reporting**
 
--Contributor: **Perci**
-
 Developed the Flask web application
 
 Designed and styled the UI
@@ -156,13 +150,3 @@ Bias analysis is currently distribution-based
 No outcome-based or intersectional fairness analysis yet
 
 Designed to avoid over-flagging and false positives
-
----
-
-**Team**
-
-Hafsa Outalb — Dataset governance, bias analysis, risk scoring
-
-Eya Ben Amara — Documentation governance, policy rules, scoring
-
-Perci — Web application, UI, reporting pipeline
