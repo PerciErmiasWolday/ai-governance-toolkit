@@ -1,10 +1,9 @@
 {
-  "model_name": "Student Performance Predictor",
-  "purpose": "Predict student grades based on study habits.",
-  "dataset_description": "Data collected from survey of 300 students.",
-  "limitations": "",
-  "evaluation_metrics": "Accuracy, F1-score",
-  "intended_use": "Educational guidance",
-  "not_intended_use": "",
-  "privacy_and_security": ""
+  "model_name": "Customer Feedback Sentiment Classifier",
+  "purpose": "Analyze customer feedback and classify sentiment (positive/neutral/negative).",
+  "intended_use": "Customer service analytics in retail/e-commerce; written feedback only.",
+  "dataset_description": "Anonymized customer feedback from surveys and reviews; 10–200 words; PII removed.",
+  "evaluation_metrics": "Accuracy 87%, F1-score 0.83; precision/recall per class.",
+  "limitations": "May struggle with sarcasm/ambiguity; performance may drop on unseen languages/slang; weak on abusive language detection.",
+  "privacy_notes": "No PII; no user identifiers stored; outputs don’t reveal identity."
 }

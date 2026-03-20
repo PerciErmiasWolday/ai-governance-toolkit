@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ai-governance-toolkit.iml" filepath="$PROJECT_DIR$/.idea/ai-governance-toolkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/static/.idea/static.iml" filepath="$PROJECT_DIR$/static/.idea/static.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/templates/.idea/templates.iml" filepath="$USER_HOME$/Downloads/templates/.idea/templates.iml" />
     </modules>
   </component>
 </project>

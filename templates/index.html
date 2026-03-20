@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Governance Toolkit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <h1>AI Governance Toolkit</h1>
+    <p>A mini platform for bias analysis, documentation review, and AI risk reporting</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Upload Inputs</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Dataset (CSV)</label>
+                <input type="file" name="dataset" required>
+            </div>
+
+            <div class="form-group">
+                <label>Model Description</label>
+                <textarea name="description"
+                          rows="5"
+                          placeholder="Describe the model, use case, limitations, and assumptions..."
+                          required></textarea>
+            </div>
+
+            <button type="submit">Generate Governance Report</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    Built as part of the AI Governance Toolkit project
+</footer>
+
+</body>
+</html>

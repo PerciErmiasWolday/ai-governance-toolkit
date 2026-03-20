@@ -9,24 +9,24 @@ def analyze_bias(df: pd.DataFrame):
 
     results = {}
 
-    # 1️⃣ Missing values analysis
+    #  Missing values analysis
     missing = df.isnull().sum()
     results["missing_values"] = missing.to_dict()
 
-    # 2️⃣ Detect categorical columns
+    # Detect categorical columns
     categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
     results["categorical_columns"] = categorical_cols
 
     imbalance_report = {}
 
-    # 3️⃣ For each categorical column, check imbalance
+    #  For each categorical column, check imbalance
     for col in categorical_cols:
         counts = df[col].value_counts(normalize=True)
         imbalance_report[col] = counts.to_dict()
 
     results["class_imbalance"] = imbalance_report
 
-    # 4️⃣ Simple bias flag (if one group > 70%)
+    # Simple bias flag (if one group > 70%)
     bias_flags = {}
     for col, dist in imbalance_report.items():
         for group, pct in dist.items():
@@ -36,3 +36,31 @@ def analyze_bias(df: pd.DataFrame):
     results["bias_flags"] = bias_flags
 
     return results
+import matplotlib.pyplot as plt
+
+def plot_imbalance(df, save_path="imbalance_plot.png"):
+    """
+    Plots category distribution for each categorical column.
+    Saves the plot as a PNG file.
+    """
+
+    categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
+
+    for col in categorical_cols:
+        counts = df[col].value_counts()
+
+        plt.figure(figsize=(6, 4))
+        counts.plot(kind="bar", color="skyblue")
+
+        plt.title(f"Category Distribution: {col}")
+        plt.xlabel(col)
+        plt.ylabel("Count")
+
+        plt.tight_layout()
+
+        # Save each chart separately
+        file_name = f"{save_path.replace('.png', '')}_{col}.png"
+        plt.savefig(file_name)
+        plt.close()
+
+    return "Plots saved successfully."
